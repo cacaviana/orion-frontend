@@ -1,0 +1,10 @@
+{
+  "ocr.ejs": {
+    "layoutPage": "telaprincipal-vertical",
+    "description": ""
+  },
+  "transc-video.ejs": {
+    "layoutPage": "telaprincipal-vertical",
+    "description": ""
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "routes": [
+    {
+      "path": "/",
+      "page": "index",
+      "routeType": "page",
+      "layout": "main"
+    },
+    {
+      "path": "/ocr",
+      "page": "ocr",
+      "layout": "telaprincipal-vertical"
+    },
+    {
+      "path": "/transc-video",
+      "page": "transc-video",
+      "layout": "telaprincipal-vertical"
+    }
+  ]
+}

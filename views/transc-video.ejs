@@ -1,0 +1,45 @@
+<!-- Wappler include head-page="layouts/telaprincipal-vertical" fontawesome_5="cdn" bootstrap5="local" is="dmx-app" id="transcvideo" appConnect="local" -->
+<meta name="ac:route" content="/transc-video">
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Drive & Azure Video Transcription</title>
+    <link rel="stylesheet" href="path/to/vuexy-template.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Card para listar arquivos -->
+        <div class="card mt-3">
+            <div class="card-header">
+                <h4 class="card-title">List files from Google Drive folder</h4>
+            </div>
+            <div class="card-body">
+                <input type="text" id="drive-folder-id" class="form-control" placeholder="Cole o ID da pasta do Google Drive">
+                <button id="list-files" class="btn btn-primary mt-2">List Files</button>
+                <textarea id="file-list" class="form-control mt-3" rows="5" disabled></textarea>
+            </div>
+        </div>
+
+        <!-- Card para transcrever vídeos -->
+        <div class="card mt-3">
+            <div class="card-header">
+                <h4 class="card-title">Transcription Videos&nbsp;</h4>
+            </div>
+            <div class="card-body">
+                <button id="transcribe-videos" class="btn btn-success mt-2">Transcription&nbsp;</button>
+                <textarea id="video-ids" class="form-control mt-3" rows="5" disabled></textarea>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
+
+<script src="/assets/js/itvalley-js/transcription.js"></script>
