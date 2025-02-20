@@ -1,4 +1,8 @@
-
+// Definir a URL base dinamicamente no início do código
+const isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
+const URL_API = isLocal 
+    ? "http://127.0.0.1:8000/api/azure/extract_pdf_to_assistants" 
+    : "https://app-orion-dev.azurewebsites.net/api/azure/extract_pdf_to_assistants";
 
     // Função para exibir o preloader
 function showPreloader() {
@@ -45,7 +49,7 @@ function hidePreloader() {
 
             try {
                 // Envia a requisição usando Fetch API
-                const response = await fetch("http://127.0.0.1:8000/api/azure/extract_pdf_to_assistants", {
+                const response = await fetch(URL_API, {
                     method: "POST",
                     body: formData
                 });
@@ -62,7 +66,7 @@ function hidePreloader() {
             const extractedText = result;
 
             // Insere o texto extraído no div de resposta
-            document.getElementById("responseContainer").innerText = extractedText;
+            document.getElementById("responseContainer").innerHTML = extractedText;
             console.log("Texto extraído:", extractedText);
         } else {
             const errorText = await response.text();
